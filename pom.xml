@@ -143,7 +143,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.sabre.api.sacs.rest</mainClass>
+							<mainClass>com.sabre.api.sacs.rest.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
