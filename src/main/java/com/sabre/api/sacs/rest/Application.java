@@ -17,5 +17,9 @@ public class Application {
 	public ApplicationContext getApplicationContext(String... args) throws Exception {
 		return SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
+	
+	public static void main (String [] args) {
+		SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
+	}
 
 }
