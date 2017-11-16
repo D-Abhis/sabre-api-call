@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sabre.api.sacs.config.ConfigurationConfig;
@@ -17,6 +19,7 @@ import com.sabre.api.sacs.rest.domain.leadpricecalendar.LeadPriceCalendarRespons
  */
 @SpringBootApplication
 @ComponentScan
+@RestController
 public class Application {
 	
 	private static final Logger LOG = LogManager.getLogger(Application.class);
@@ -27,12 +30,19 @@ public class Application {
 	}
 	
 	public static void main (String [] args) throws Exception{
-		final ApplicationContext ctx = new Application().getApplicationContext();
-		final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
-		final SharedContext context = new SharedContext();
-		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context);
-		LOG.debug(mapper.writeValueAsString(run));
-		LOG.error(context.getError());
+//		final ApplicationContext ctx = new Application().getApplicationContext();
+//		final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
+//		final SharedContext context = new SharedContext();
+//		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context);
+//		LOG.debug(mapper.writeValueAsString(run));
+//		LOG.error(context.getError());
+		SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
+	
+	@RequestMapping(value="/test")
+	public String test() {
+		return "test";
+	}
+	
 
 }
