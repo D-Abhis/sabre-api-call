@@ -30,18 +30,13 @@ public class Application {
 	}
 	
 	public static void main (String [] args) throws Exception{
-//		final ApplicationContext ctx = new Application().getApplicationContext();
-//		final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
-//		final SharedContext context = new SharedContext();
-//		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context);
-//		LOG.debug(mapper.writeValueAsString(run));
-//		LOG.error(context.getError());
-		SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
-	}
-	
-	@RequestMapping(value="/test")
-	public String test() {
-		return "test";
+		final ApplicationContext ctx = new Application().getApplicationContext();
+		final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
+		final SharedContext context = new SharedContext();
+		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context);
+		LOG.debug(mapper.writeValueAsString(run));
+		LOG.error(context.getError());
+		//SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
 	
 
