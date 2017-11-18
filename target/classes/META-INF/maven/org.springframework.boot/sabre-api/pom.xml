@@ -157,7 +157,7 @@
 				<version>1.0.0</version>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>src/main/docker</dockerDirectory>
+					<dockerDirectory>src/main/dockerbuild</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
