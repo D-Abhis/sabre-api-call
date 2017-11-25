@@ -24,7 +24,8 @@ public class LeadPriceCalendarTest {
 		final ApplicationContext ctx = new Application().getApplicationContext();
 		final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
 		final SharedContext context = new SharedContext();
-		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context);
+		final LeadPriceCalendarResponse run = bean.doCalendarPricing(context, "LAX", "JFK", "2015-10-05", 5, "0",
+				"10000");
 		LOG.debug(mapper.writeValueAsString(run));
 		LOG.error(context.getError());
 	}

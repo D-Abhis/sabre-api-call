@@ -3,7 +3,9 @@ package com.sabre.api.sacs.rest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.sabre.api.sacs.config.SacsConfiguration;
 import com.sabre.api.sacs.rest.common.GenericRestGetCall;
@@ -14,7 +16,7 @@ import com.sabre.api.sacs.rest.domain.leadpricecalendar.LeadPriceCalendarRespons
 /**
  * Activity to use in workflow. It runs the LeadPriceCalendarActivity.
  */
-@Controller
+@RestController
 public class LeadPriceCalendar {
 
 	@Autowired
@@ -24,9 +26,16 @@ public class LeadPriceCalendar {
 	private GenericRestGetCall<LeadPriceCalendarRequest> call;
 	final Logger LOG = LogManager.getLogger(LeadPriceCalendar.class);
 
-	public LeadPriceCalendarResponse doCalendarPricing(SharedContext context) {
-		LeadPriceCalendarRequest request = new LeadPriceCalendarRequest.Builder().origin("LAX").destination("JFK")
-				.lengthOfStay(5).pointOfSaleCountry("US").build();
+	@RequestMapping(value = "/lowAirfareSearch")
+	public LeadPriceCalendarResponse doCalendarPricing(SharedContext context,
+			@RequestParam(value = "origin") String origin, @RequestParam(value = "destination") String destination,
+			@RequestParam(value = "departureDate") String departureDate,
+			@RequestParam(value = "lengthOfStay") int lengthOfStay,
+			@RequestParam(value = "minfare", required = false) String minFare,
+			@RequestParam(value = "maxfare", required = false) String maxFare) {
+		LeadPriceCalendarRequest request = new LeadPriceCalendarRequest.Builder().origin(origin)
+				.destination(destination).lengthOfStay(lengthOfStay).minFare(minFare).maxFare(maxFare)
+				.pointOfSaleCountry("US").build();
 		final String endpoint = config.getRestProperty("environment") + "/v2/shop/flights/fares";
 		LOG.debug("URL: " + endpoint);
 		call.setUrl(endpoint);

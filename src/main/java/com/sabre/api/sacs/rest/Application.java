@@ -38,24 +38,24 @@ public class Application {
 	}
 
 	
-	@RequestMapping("/lowAirfareSearch")
-	public LeadPriceCalendarResponse lowAirfareSearch() throws Exception{
-		//ApplicationContext ctx;
-		LeadPriceCalendarResponse run = null;
-		try {
-			//ctx = new Application().getApplicationContext();
-			final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
-			final SharedContext context = new SharedContext();
-			run = bean.doCalendarPricing(context);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}		
-		return run;
-		//LOG.debug(mapper.writeValueAsString(run));
-		//LOG.error(context.getError());
-		//SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
-	}
+//	@RequestMapping("/lowAirfareSearch")
+//	public LeadPriceCalendarResponse lowAirfareSearch() throws Exception{
+//		//ApplicationContext ctx;
+//		LeadPriceCalendarResponse run = null;
+//		try {
+//			//ctx = new Application().getApplicationContext();
+//			final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
+//			final SharedContext context = new SharedContext();
+//			run = bean.doCalendarPricing(context);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}		
+//		return run;
+//		//LOG.debug(mapper.writeValueAsString(run));
+//		//LOG.error(context.getError());
+//		//SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
+//	}
 	
 
 }

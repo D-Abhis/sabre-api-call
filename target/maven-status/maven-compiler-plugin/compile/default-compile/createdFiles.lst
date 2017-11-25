@@ -71,7 +71,6 @@ com\sabre\api\sacs\rest\domain\generated\FareCalcLine.class
 com\sabre\api\sacs\rest\domain\auth\AuthResponse.class
 com\sabre\api\sacs\rest\domain\generated\OTAAirLowFareSearchRS.class
 com\sabre\api\sacs\rest\domain\generated\TotalFare_.class
-com\sabre\api\sacs\rest\SerInitializer.class
 com\sabre\api\sacs\rest\domain\bargainfindermax\PricedItineraries.class
 com\sabre\api\sacs\rest\domain\generated\DepartureAirport.class
 com\sabre\api\sacs\rest\domain\generated\FareInfos.class
@@ -132,6 +131,7 @@ com\sabre\api\sacs\rest\domain\instaflight_gen\ArrivalTimeZone.class
 com\sabre\api\sacs\rest\domain\bargainfindermax\IntelliSellTransaction.class
 com\sabre\api\sacs\rest\domain\generated\SeatsRemaining.class
 com\sabre\api\sacs\rest\domain\instaflight_gen\BaseFare_.class
+com\sabre\api\sacs\rest\ServletInitializer.class
 com\sabre\api\sacs\rest\domain\instaflight_gen\BaseFare.class
 com\sabre\api\sacs\rest\domain\bargainfindermax\CompanyName.class
 com\sabre\api\sacs\rest\common\context\Visitable.class
