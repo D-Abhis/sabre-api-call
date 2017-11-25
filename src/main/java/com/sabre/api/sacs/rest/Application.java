@@ -30,7 +30,7 @@ public class Application {
 	}
 	
 	//@RequestMapping("/test")
-	public static void main () throws Exception{
+	public static void main (String args[]) throws Exception{
 		ApplicationContext ctx;
 		LeadPriceCalendarResponse run = null;
 		try {

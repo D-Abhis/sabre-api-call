@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sabre.api.sacs.rest.LeadPriceCalendarTest" time="11.57" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="com.sabre.api.sacs.rest.LeadPriceCalendarTest" time="8.623" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_92\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Abhishek\Documents\Micromakers\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6074038322769363344.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Abhishek\Documents\Micromakers\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7946653562324883774.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_92\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\app\Abhishek\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin;C:\Program Files\Java\jdk1.8.0_92\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files (x86)\Common Files\Apple\Internet Services\;C:\Users\Abhishek\AppData\Local\Microsoft\WindowsApps;;N:\Softwares\spring-tool-suite-3.9.0.RELEASE-e4.7.0-win32-x86_64\sts-bundle\sts-3.9.0.RELEASE;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,5 +60,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testDoCalendarPricing" classname="com.sabre.api.sacs.rest.LeadPriceCalendarTest" time="11.57"/>
+  <testcase name="testDoCalendarPricing" classname="com.sabre.api.sacs.rest.LeadPriceCalendarTest" time="8.623"/>
 </testsuite>
