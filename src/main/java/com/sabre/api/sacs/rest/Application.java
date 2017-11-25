@@ -22,15 +22,15 @@ import com.sabre.api.sacs.rest.domain.leadpricecalendar.LeadPriceCalendarRespons
 @RestController
 public class Application {
 	
-	private static final Logger LOG = LogManager.getLogger(Application.class);
-	private static final ObjectMapper mapper = new ObjectMapper();
+//	private static final Logger LOG = LogManager.getLogger(Application.class);
+//	private static final ObjectMapper mapper = new ObjectMapper();
 
 	public ApplicationContext getApplicationContext(String... args) throws Exception {
 		return SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
 	
-	//@RequestMapping("/test")
-	public static void main (String args[]) throws Exception{
+	@RequestMapping("/lowAirfareSearch")
+	public LeadPriceCalendarResponse lowAirfareSearch() throws Exception{
 		ApplicationContext ctx;
 		LeadPriceCalendarResponse run = null;
 		try {
@@ -42,8 +42,8 @@ public class Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
-		//return run;
-		LOG.debug(mapper.writeValueAsString(run));
+		return run;
+		//LOG.debug(mapper.writeValueAsString(run));
 		//LOG.error(context.getError());
 		//SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
