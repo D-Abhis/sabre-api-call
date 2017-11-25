@@ -2,6 +2,7 @@ package com.sabre.api.sacs.rest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -24,17 +25,25 @@ public class Application {
 	
 //	private static final Logger LOG = LogManager.getLogger(Application.class);
 //	private static final ObjectMapper mapper = new ObjectMapper();
+	
+	@Autowired
+	private ApplicationContext ctx;
 
 	public ApplicationContext getApplicationContext(String... args) throws Exception {
 		return SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
 	}
 	
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(new Object[] { ConfigurationConfig.class, Application.class }, args);
+	}
+
+	
 	@RequestMapping("/lowAirfareSearch")
 	public LeadPriceCalendarResponse lowAirfareSearch() throws Exception{
-		ApplicationContext ctx;
+		//ApplicationContext ctx;
 		LeadPriceCalendarResponse run = null;
 		try {
-			ctx = new Application().getApplicationContext();
+			//ctx = new Application().getApplicationContext();
 			final LeadPriceCalendar bean = ctx.getBean(LeadPriceCalendar.class);
 			final SharedContext context = new SharedContext();
 			run = bean.doCalendarPricing(context);
